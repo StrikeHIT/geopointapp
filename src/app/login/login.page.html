@@ -1,0 +1,24 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+     <ion-buttons slot="end">
+      <ion-button routerLink="/signup">Cadastrar-se</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header">
+    <h1>LOGIN</h1>
+    <img src="assets/logo.png" />
+  </div>
+
+
+  <form id="form">
+    <app-input name="usuario" type="text" [(ngModel)]="usuario" ngDefaultControl placeholder="Email"></app-input>
+    <app-input name="senha" type="password" [(ngModel)]="senha" ngDefaultControl placeholder="Password"></app-input>
+    <p ion-text class="text08">
+      <ion-text color="warning"></ion-text>
+    </p>
+    <ion-button (click) ="login()" tappable expand="block" shape="round">Login</ion-button>
+  </form>
+</ion-content>
